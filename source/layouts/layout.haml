@@ -1,0 +1,29 @@
+!!! 5
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+%html.no-js
+  <!--<![endif]-->
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    
+    %title= data.page.title || ""
+
+    %meta{:content => "width=device-width", :name => "viewport"}
+
+    %meta{:content => data.page.description, :name => "description"}
+
+    = javascript_include_tag "vendor/modernizr"
+    = stylesheet_link_tag "site"
+
+  %body
+    %header#header
+      
+    #main{:role => :main}= yield
+
+    %footer#footer
+      
+
+
+    
